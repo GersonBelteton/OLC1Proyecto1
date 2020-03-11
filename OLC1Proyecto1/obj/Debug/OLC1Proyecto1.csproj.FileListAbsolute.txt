@@ -1,0 +1,10 @@
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\bin\Debug\OLC1Proyecto1.exe.config
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\bin\Debug\OLC1Proyecto1.exe
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\bin\Debug\OLC1Proyecto1.pdb
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\obj\Debug\OLC1Proyecto1.csprojAssemblyReference.cache
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\obj\Debug\OLC1Proyecto1.Form1.resources
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\obj\Debug\OLC1Proyecto1.Properties.Resources.resources
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\obj\Debug\OLC1Proyecto1.csproj.GenerateResource.cache
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\obj\Debug\OLC1Proyecto1.csproj.CoreCompileInputs.cache
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\obj\Debug\OLC1Proyecto1.exe
+C:\Users\gerso\source\repos\OLC1Proyecto1\OLC1Proyecto1\obj\Debug\OLC1Proyecto1.pdb
