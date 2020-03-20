@@ -1,0 +1,27 @@
+digraph G { 
+ rankdir = LR;
+nodo0[label = "0"];
+nodo0[style=filled fillcolor = green];
+ nodo1[label = "1"];
+nodo2[label = "2"];
+nodo3[label = "3"];
+nodo4[label = "4"];
+nodo5[label = "5"];
+nodo6[label = "6"];
+nodo13[label = "13"];
+nodo13[style=filled fillcolor = blue];
+ nodo0-> nodo1[label="c"];
+nodo0-> nodo2[label="a"];
+nodo0-> nodo3[label="b"];
+nodo1-> nodo4[label="d"];
+nodo2-> nodo5[label="b"];
+nodo3-> nodo6[label="c"];
+nodo4-> nodo1[label="c"];
+nodo4-> nodo2[label="a"];
+nodo4-> nodo3[label="b"];
+nodo5-> nodo1[label="c"];
+nodo5-> nodo2[label="a"];
+nodo5-> nodo3[label="b"];
+nodo6-> nodo13[label="d"];
+nodo13-> nodo13[label="d"];
+}

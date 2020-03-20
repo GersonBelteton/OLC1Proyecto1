@@ -1,14 +1,32 @@
 digraph G { 
  rankdir = LR;
 nodo0[label = "0"];
-nodo0[style=filled fillcolor = green];
- nodo1[label = "1"];
+nodo1[label = "1"];
 nodo2[label = "2"];
 nodo3[label = "3"];
-nodo3[style=filled fillcolor = blue];
+nodo4[label = "4"];
+nodo5[label = "5"];
+nodo6[label = "6"];
+nodo7[label = "7"];
+nodo8[label = "8"];
+nodo9[label = "9"];
+nodo10[label = "10"];
+nodo10[style=filled fillcolor = green];
+ nodo11[label = "11"];
+nodo11[style=filled fillcolor = blue];
  nodo0-> nodo1[label="ep"];
-nodo1-> nodo2[label="a"];
-nodo2-> nodo3[label="ep"];
-nodo0-> nodo3[label="ep"];
+nodo1-> nodo2[label="b"];
 nodo2-> nodo1[label="ep"];
+nodo2-> nodo3[label="ep"];
+nodo4-> nodo0[label="a"];
+nodo5-> nodo6[label="ep"];
+nodo6-> nodo7[label="b"];
+nodo7-> nodo8[label="ep"];
+nodo5-> nodo8[label="ep"];
+nodo7-> nodo6[label="ep"];
+nodo9-> nodo5[label="a"];
+nodo10-> nodo4[label="ep"];
+nodo10-> nodo9[label="ep"];
+nodo3-> nodo11[label="ep"];
+nodo8-> nodo11[label="ep"];
 }

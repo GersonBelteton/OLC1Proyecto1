@@ -10,6 +10,8 @@ namespace OLC1Proyecto1
     class AnalizadorLexico
     {
         List<Image> imagenes;
+        List<Image> imagenesAFD;
+        List<Image> imagenesTT;
         //fastcoloredtextbox
         LinkedList<Token> listaToken;
         LinkedList<Error> listaError;
@@ -495,9 +497,20 @@ namespace OLC1Proyecto1
             a.generarAFN(listaER);
             
             imagenes = a.getListaImg();
+            imagenesAFD = a.getListaImgAFD();
+            imagenesTT = a.getListaImgTT();
 
         }
 
+        public List<Image> getListaImgTT()
+        {
+            return imagenesTT;
+        }
+
+        public List<Image> getListaImgAFD()
+        {
+            return imagenesAFD;
+        }
         public List<Image> getListaImg()
         {
             return imagenes;

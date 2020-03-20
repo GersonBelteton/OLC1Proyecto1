@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AFD.cs" />
     <Compile Include="AFN.cs" />
     <Compile Include="AnalizadorLexico.cs" />
     <Compile Include="Conjunto.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="Estado.cs" />
+    <Compile Include="EstadoAFD.cs" />
     <Compile Include="ExprecionRegular.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -63,6 +65,7 @@
     <Compile Include="Token.cs" />
     <Compile Include="TokenExp.cs" />
     <Compile Include="Transicion.cs" />
+    <Compile Include="TransicionAFD.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

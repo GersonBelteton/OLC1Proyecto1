@@ -15,7 +15,10 @@ namespace OLC1Proyecto1
 
         List<TokenExp> lista;
         List<Estado> estados;
+        List<String> terminales;
         List<Transicion> transiciones;
+        List<Image> imagenesAFD;
+        List<Image> imagenesTT;
         public static List<Image> imagenes = new List<Image>();
         public static int contadorImagen = 0;
         String pathImg;
@@ -236,7 +239,8 @@ namespace OLC1Proyecto1
                                  
                                   //  lista[j + 1].setFinal(lista[j + 2].getInicial()) ;
 
-                                    lista[j + 1].getFinal().setNumero(lista[j + 2].getInicial().getNumero());
+                                    //lista[j + 1].getFinal().setNumero(lista[j + 2].getInicial().getNumero());
+                                    transiciones.Add(new Transicion(lista[j + 1].getFinal(), lista[j + 2].getInicial(), "ep"));
 
                                     lista[j].setEstGenerada(true);
                                     lista[j].setInicial(lista[j+1].getInicial());
@@ -444,9 +448,14 @@ namespace OLC1Proyecto1
                 String codigo = generarCodigoGraphviz();
                 generarImagenGraphviz(codigo, "afn"+contadorImagen);
                 contadorImagen++;
-
                 Console.WriteLine("contador imagen" + contadorImagen);
                 llenarTransicionesPorEstado();
+
+                AFD afd = new AFD();
+                afd.generarAFD(estados, terminales);
+                imagenesAFD = afd.getListaImg();
+                imagenesTT = afd.getListaImgTT();
+
             }
 
             
@@ -457,6 +466,16 @@ namespace OLC1Proyecto1
             for(int i = 0; i < transiciones.Count(); i++)
             {
                 transiciones[i].getInicial().getListTrans().Add(transiciones[i]);
+            }
+
+            for(int i = 0; i < estados.Count(); i++)
+            {
+                Console.WriteLine("Estado " + estados[i].getNumero());
+                for(int j = 0; j < estados[i].getListTrans().Count(); j++)
+                {
+                    Console.Write(estados[i].getListTrans()[j].getSimbolo() + ", ");
+                }
+                Console.WriteLine("\n");
             }
         }
 
@@ -578,6 +597,16 @@ namespace OLC1Proyecto1
             return imagenes;
         }
 
+        public List<Image> getListaImgAFD()
+        {
+            return imagenesAFD;
+        }
+
+        public List<Image> getListaImgTT()
+        {
+            return imagenesTT;
+        }
+
         public void mostrarLista()
         {
 
@@ -593,6 +622,7 @@ namespace OLC1Proyecto1
         public void llenarLista(ExprecionRegular listaToken)
         {
             lista = new List<TokenExp>();
+            terminales = new List<String>();
             Token[] tokens = listaToken.getExprecion().ToArray();
             for (int i =0; i < tokens.Count(); i++)
             {
@@ -609,6 +639,29 @@ namespace OLC1Proyecto1
                     else
                     {
                         lista.Add(new TokenExp(tokens[i].getToken(), tokens[i].getLexema(), true, false, false));
+                        Boolean existe = false;
+
+                        if(terminales.Count() > 0)
+                        {
+                            for (int j = 0; j < terminales.Count(); j++)
+                            {
+                                if (tokens[i].getLexema().Equals(terminales[j]))
+                                {
+                                    existe = true;
+                                    break;
+                                }
+                            }
+                            if (!existe)
+                            {
+                                terminales.Add(tokens[i].getLexema());
+                            }
+                        }
+                        else
+                        {
+                            terminales.Add(tokens[i].getLexema());
+                        }
+               
+                       
                     }
                 }
 

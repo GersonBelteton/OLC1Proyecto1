@@ -15,6 +15,10 @@ namespace OLC1Proyecto1
     {
         AnalizadorLexico al = new AnalizadorLexico();
         List<Image> imagenes = new List<Image>();
+        List<Image> imagenesAFD = new List<Image>();
+        Boolean mostrarAFN = false;
+        Boolean mostrarAFD = false;
+        Boolean mostrarTT = false;
         public static RichTextBox[] txtEntrada = new RichTextBox[20];
         int contadorImagen = 0;
         public Form1()
@@ -103,6 +107,7 @@ namespace OLC1Proyecto1
           //  imagenes = al.getListaImg();
             //imagenes.Add(al.getListaImg()[al.getListaImg().Count - 1]);
             contadorImagen = al.getListaImg().Count() - 1;
+            mostrarAFN = true;
             mostrarImagen();
           //  imagenAfn.Image = imagenes[imagenes.Count()-1];
             
@@ -250,13 +255,49 @@ namespace OLC1Proyecto1
             {
                 contadorImagen = al.getListaImg().Count() - 1;
             }
-            imagenAfn.Image = al.getListaImg()[contadorImagen];
+
+            if (mostrarAFN)
+            {
+                imagenAfn.Image = al.getListaImg()[contadorImagen];
+            }else if (mostrarAFD)
+            {
+                imagenAfn.Image = al.getListaImgAFD()[contadorImagen];
+            }
+            else if(mostrarTT)
+            {
+                imagenAfn.Image = al.getListaImgTT()[contadorImagen];
+            }
+            
 
         }
 
         private void BtnSiguiente_Click(object sender, EventArgs e)
         {
             contadorImagen++;
+            mostrarImagen();
+        }
+
+        private void BtnAFN_Click(object sender, EventArgs e)
+        {
+            mostrarAFN = true;
+            mostrarAFD = false;
+            mostrarTT = false;
+            mostrarImagen();
+        }
+
+        private void BtnAFD_Click(object sender, EventArgs e)
+        {
+            mostrarAFN = false;
+            mostrarAFD = true;
+            mostrarTT = false;
+            mostrarImagen();
+        }
+
+        private void BtnTT_Click(object sender, EventArgs e)
+        {
+            mostrarAFN = false;
+            mostrarAFD = false;
+            mostrarTT = true;
             mostrarImagen();
         }
     }

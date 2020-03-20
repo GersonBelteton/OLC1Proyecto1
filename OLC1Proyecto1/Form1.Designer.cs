@@ -45,6 +45,9 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.imagenAfn = new System.Windows.Forms.PictureBox();
+            this.btnAFN = new System.Windows.Forms.Button();
+            this.btnAFD = new System.Windows.Forms.Button();
+            this.btnTT = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenAfn)).BeginInit();
@@ -176,15 +179,48 @@
             // 
             this.imagenAfn.Location = new System.Drawing.Point(3, 3);
             this.imagenAfn.Name = "imagenAfn";
-            this.imagenAfn.Size = new System.Drawing.Size(2000, 550);
+            this.imagenAfn.Size = new System.Drawing.Size(2000, 684);
             this.imagenAfn.TabIndex = 0;
             this.imagenAfn.TabStop = false;
+            // 
+            // btnAFN
+            // 
+            this.btnAFN.Location = new System.Drawing.Point(558, 24);
+            this.btnAFN.Name = "btnAFN";
+            this.btnAFN.Size = new System.Drawing.Size(75, 20);
+            this.btnAFN.TabIndex = 7;
+            this.btnAFN.Text = "AFN";
+            this.btnAFN.UseVisualStyleBackColor = true;
+            this.btnAFN.Click += new System.EventHandler(this.BtnAFN_Click);
+            // 
+            // btnAFD
+            // 
+            this.btnAFD.Location = new System.Drawing.Point(660, 24);
+            this.btnAFD.Name = "btnAFD";
+            this.btnAFD.Size = new System.Drawing.Size(75, 23);
+            this.btnAFD.TabIndex = 8;
+            this.btnAFD.Text = "AFD";
+            this.btnAFD.UseVisualStyleBackColor = true;
+            this.btnAFD.Click += new System.EventHandler(this.BtnAFD_Click);
+            // 
+            // btnTT
+            // 
+            this.btnTT.Location = new System.Drawing.Point(763, 23);
+            this.btnTT.Name = "btnTT";
+            this.btnTT.Size = new System.Drawing.Size(128, 23);
+            this.btnTT.TabIndex = 9;
+            this.btnTT.Text = "Tabla de Transicion";
+            this.btnTT.UseVisualStyleBackColor = true;
+            this.btnTT.Click += new System.EventHandler(this.BtnTT_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1365, 749);
+            this.Controls.Add(this.btnTT);
+            this.Controls.Add(this.btnAFD);
+            this.Controls.Add(this.btnAFN);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);
@@ -221,6 +257,9 @@
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox imagenAfn;
+        private System.Windows.Forms.Button btnAFN;
+        private System.Windows.Forms.Button btnAFD;
+        private System.Windows.Forms.Button btnTT;
     }
 }
 

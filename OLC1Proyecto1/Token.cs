@@ -41,13 +41,14 @@ namespace OLC1Proyecto1
         private tipo token;
         private String lexema;
         private int fila, columna;
-
+        private Boolean agregadoListaTerminales;
         public Token(tipo token, String lexema, int fila, int columna)
         {
             this.token = token;
             this.lexema = lexema;
             this.fila = fila;
             this.columna = columna;
+          
         }
 
         public String getToken()
@@ -109,7 +110,9 @@ namespace OLC1Proyecto1
 
         }
 
+     
 
+  
         public String getLexema()
         {
             return lexema;
